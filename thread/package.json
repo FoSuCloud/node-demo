@@ -1,0 +1,17 @@
+{
+  "name": "thread",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node main-pool.js",
+    "debug": "nodemon --inspect=0.0.0.0:9229 main-pool.js"},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "parse-js": "^0.8.0",
+    "nodemon": "^2.0.7"
+  }
+}

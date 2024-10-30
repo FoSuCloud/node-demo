@@ -1,0 +1,30 @@
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "debug": "nodemon --inspect=0.0.0.0:9229 viewLog.js",
+    "ws-server": "node --inspect=0.0.0.0:9229 websocket/websocket-server.js",
+    "start": "node viewLog.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "html-pdf": "^3.0.1",
+    "icrypto": "0.0.1",
+    "nodemon": "^2.0.7",
+    "openai": "^3.2.1",
+    "randomstring": "^1.2.3",
+    "ronin-database": "^0.1.1",
+    "ronin-mocks": "^0.1.4",
+    "ronin-server": "^0.1.3",
+    "ws": "^8.0.0"
+  },
+  "devDependencies": {
+    "parse-js": "^0.8.0"
+  }
+}

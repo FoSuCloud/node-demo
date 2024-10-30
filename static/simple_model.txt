@@ -1,0 +1,78 @@
+ir_version: 7
+producer_name: "pytorch"
+producer_version: "1.13.1"
+graph {
+  node {
+    input: "onnx::Gemm_0"
+    input: "fc.weight"
+    input: "fc.bias"
+    output: "3"
+    name: "/fc/Gemm"
+    op_type: "Gemm"
+    attribute {
+      name: "alpha"
+      f: 1.0
+      type: FLOAT
+    }
+    attribute {
+      name: "beta"
+      f: 1.0
+      type: FLOAT
+    }
+    attribute {
+      name: "transB"
+      i: 1
+      type: INT
+    }
+    doc_string: "/opt/conda/envs/venv/lib/python3.8/site-packages/torch/nn/modules/linear.py(114): forward\n/opt/conda/envs/venv/lib/python3.8/site-packages/torch/nn/modules/module.py(1182): _slow_forward\n/opt/conda/envs/venv/lib/python3.8/site-packages/torch/nn/modules/module.py(1194): _call_impl\n/tmp/ipykernel_58/3673994932.py(12): forward\n/opt/conda/envs/venv/lib/python3.8/site-packages/torch/nn/modules/module.py(1182): _slow_forward\n/opt/conda/envs/venv/lib/python3.8/site-packages/torch/nn/modules/module.py(1194): _call_impl\n/opt/conda/envs/venv/lib/python3.8/site-packages/torch/jit/_trace.py(118): wrapper\n/opt/conda/envs/venv/lib/python3.8/site-packages/torch/jit/_trace.py(127): forward\n/opt/conda/envs/venv/lib/python3.8/site-packages/torch/nn/modules/module.py(1194): _call_impl\n/opt/conda/envs/venv/lib/python3.8/site-packages/torch/jit/_trace.py(1184): _get_trace_graph\n/opt/conda/envs/venv/lib/python3.8/site-packages/torch/onnx/utils.py(891): _trace_and_get_graph_from_model\n/opt/conda/envs/venv/lib/python3.8/site-packages/torch/onnx/utils.py(987): _create_jit_graph\n/opt/conda/envs/venv/lib/python3.8/site-packages/torch/onnx/utils.py(1111): _model_to_graph\n/opt/conda/envs/venv/lib/python3.8/site-packages/torch/onnx/utils.py(1529): _export\n/opt/conda/envs/venv/lib/python3.8/site-packages/torch/onnx/utils.py(504): export\n/tmp/ipykernel_58/3673994932.py(20): <module>\n/opt/conda/envs/venv/lib/python3.8/site-packages/IPython/core/interactiveshell.py(3508): run_code\n/opt/conda/envs/venv/lib/python3.8/site-packages/IPython/core/interactiveshell.py(3448): run_ast_nodes\n/opt/conda/envs/venv/lib/python3.8/site-packages/IPython/core/interactiveshell.py(3269): run_cell_async\n/opt/conda/envs/venv/lib/python3.8/site-packages/IPython/core/async_helpers.py(129): _pseudo_sync_runner\n/opt/conda/envs/venv/lib/python3.8/site-packages/IPython/core/interactiveshell.py(3064): _run_cell\n/opt/conda/envs/venv/lib/python3.8/site-packages/IPython/core/interactiveshell.py(3009): run_cell\n/opt/conda/envs/venv/lib/python3.8/site-packages/ipykernel/zmqshell.py(540): run_cell\n/opt/conda/envs/venv/lib/python3.8/site-packages/ipykernel/ipkernel.py(422): do_execute\n/opt/conda/envs/venv/lib/python3.8/site-packages/ipykernel/kernelbase.py(740): execute_request\n/opt/conda/envs/venv/lib/python3.8/site-packages/ipykernel/kernelbase.py(412): dispatch_shell\n/opt/conda/envs/venv/lib/python3.8/site-packages/ipykernel/kernelbase.py(505): process_one\n/opt/conda/envs/venv/lib/python3.8/site-packages/ipykernel/kernelbase.py(516): dispatch_queue\n/opt/conda/envs/venv/lib/python3.8/asyncio/events.py(81): _run\n/opt/conda/envs/venv/lib/python3.8/asyncio/base_events.py(1859): _run_once\n/opt/conda/envs/venv/lib/python3.8/asyncio/base_events.py(570): run_forever\n/opt/conda/envs/venv/lib/python3.8/site-packages/tornado/platform/asyncio.py(195): start\n/opt/conda/envs/venv/lib/python3.8/site-packages/ipykernel/kernelapp.py(728): start\n/opt/conda/envs/venv/lib/python3.8/site-packages/traitlets/config/application.py(1043): launch_instance\n/opt/conda/envs/venv/lib/python3.8/site-packages/ipykernel_launcher.py(17): <module>\n/opt/conda/envs/venv/lib/python3.8/runpy.py(87): _run_code\n/opt/conda/envs/venv/lib/python3.8/runpy.py(194): _run_module_as_main\n"
+  }
+  name: "torch_jit"
+  initializer {
+    dims: 2
+    dims: 10
+    data_type: 1
+    name: "fc.weight"
+    raw_data: "\2117\373\275\"M\023\276\365,\233\276H\316\221>\314$\211>4\200\260\273\207e\232\2756\032b\275sdi\276&\374q>\251S{=\301xw\274\265\344\364\275\2040\315\275\261\235\300\275\360\324,>\242\260;=\221t\233\276\235G\017>\220:\345\275"
+  }
+  initializer {
+    dims: 2
+    data_type: 1
+    name: "fc.bias"
+    raw_data: "\365>\354\275L\372K\275"
+  }
+  input {
+    name: "onnx::Gemm_0"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 1
+          }
+          dim {
+            dim_value: 10
+          }
+        }
+      }
+    }
+  }
+  output {
+    name: "3"
+    type {
+      tensor_type {
+        elem_type: 1
+        shape {
+          dim {
+            dim_value: 1
+          }
+          dim {
+            dim_value: 2
+          }
+        }
+      }
+    }
+  }
+}
+opset_import {
+  version: 14
+}
